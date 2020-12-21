@@ -1,0 +1,184 @@
+[
+  {
+    "path": "/tools",
+    "children": [
+      {
+        "path": "",
+        "newPath": [
+          ":type(free)/:subType(3m|1m|1w|all)",
+          ":type(pcount)/:subType(3m|1m|1w|all)",
+          ":type(osusume)/:subType(campaign|indicator|tool|ebook|set)",
+          ":type(psum)/:subType(3m|1m|1w|all)",
+          ":type(newproduct)/:subType(kabu|fx|other)",
+          ":type(sold)/:subType(fee|free)",
+          ":type(productreview)/:subType(average|count)"
+        ]
+      },
+      {
+        "path": ":showmore",
+        "newPath": [
+          ":showmore(recommend|new|recent|review)/(p)?/:p(\\d+)?",
+          ":showmore(recommend)/:type(indicator|tool|ebook|set)/(p)?/:p(\\d+)?",
+          ":showmore(new)/:type(kabu|other)/(p)?/:p(\\d+)?",
+          ":showmore(recent)/:type(free)/(p)?/:p(\\d+)?",
+          ":showmore(review)/:type(count)/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "popular/:sub?",
+        "newPath": [
+          "popular/:sub(price|count|free)/(p)?/:p(\\d+)?",
+          "popular/:sub(price)/:type(1m|1w|all)/(p)?/:p(\\d+)?",
+          "popular/:sub(count)/:type(1m|1w|all)/(p)?/:p(\\d+)?",
+          "popular/:sub(free)/:type(1m|1w|all)/(p)?/:p(\\d+)?"
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/systemtrade",
+    "children": [
+      {
+        "path": ":revenue/:category?",
+        "newPath": [
+          ":revenue(profitrate|profit|profitfactor|riskreturn|sell)/(p)?/:p(\\d+)?",
+          ":revenue(profitrate|profit|profitfactor|riskreturn|sell)/:category(fx|stocks)/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "newproduct/:category?",
+        "newPath": [
+          "newproduct/(p)?/:p(\\d+)?",
+          "newproduct/:category(fx|stocks)/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "economics/fx/:type?",
+        "newPath": "economics/fx/:type(1|2)/(p)?/:p(\\d+)?"
+      },
+      {
+        "path": "developers",
+        "newPath": "developers/(p)?/:p(\\d+)?"
+      },
+      {
+        "path": "realasset",
+        "newPath": "realasset/(p)?/:p(\\d+)?"
+      }
+    ]
+  },
+  {
+    "path": "/finance/salons/:id",
+    "newPath": "t/:t(0|1|2|3)"
+  },
+  {
+    "path": "/markets/economics",
+    "newPath":"y/:y(\\d+)/(m)?/:m(\\d+)?/(p)?/:p(\\d+)?"
+  },
+  {
+    "path": "/finance/navi",
+    "children": [
+      {
+        "path": "articles",
+        "newPath": [
+          "articles/(ipc)?/:isPaidContent(0|1)/(pt)?/:periodType(0|1|2|3)/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "articles/cat",
+        "newPath": [
+          "articles/cat/:id?/(ipc)?/:isPaidContent(0|1)/(pt)?/:periodType(0|1|2|3)/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "articles/searchresult",
+        "newPath": [
+          "articles/searchresult/(p)?/:p(\\d+)?/(ipc)?/:isPaidContent(\\d+)?/(pt)?/:periodType(\\d+)?/(w)?/:w?"
+        ]
+      },
+      {
+        "path": "series/searchresult",
+        "newPath": [
+          "series/searchresult/(p)?/:p(\\d+)?/(ipc)?/:isPaidContent(\\d+)?/(pt)?/:periodType(\\d+)?/(w)?/:w?"
+        ]
+      },
+      {
+        "path": "searchresult",
+        "newPath": [
+          "searchresult/(p)?/:p(\\d+)?/(ipc)?/:isPaidContent(\\d+)?/(pt)?/:periodType(\\d+)?/(t)?/:t?"
+        ]
+      },
+      {
+        "path": "series",
+        "newPath": [
+          "series/(ipc)?/:isPaidContent(0|1)/(pt)?/:periodType(0|1|2|3)/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "authors",
+        "newPath": "authors/(st)?/:sort(0|1|2|3)/(p)?/:p(\\d+)?/(w)?/:w?"
+      }
+    ]
+  },
+  {
+    "path": "/finance/videos",
+    "newPath": [
+      ":type(gogojungletv|new|premier|trend|searchresult)",
+      ":type(searchresult)/w/:keyword"
+    ]
+  },
+  {
+    "path": "/finance/mailmagazine",
+    "newPath": "(t)?/:t(1|2)"
+  },
+  {
+    "path": "/finance/mailmagazine/:salon",
+    "newPath": ":t(law|community)"
+  },
+  {
+    "path": "/info",
+    "newPath": [
+      ":type(seller|partner)?",
+      ":type(seller|partner)?/y/:y(\\d+)?/(t)?/:t(1|2|1,2|1%2C2|2,1|2%2C1)?",
+      "y/:y(\\d+)?"
+    ]
+  },
+  {
+    "path": "/info/:id",
+    "newPath":":type(seller|partner)/:id"
+  },
+  {
+    "path": "/review/highscore",
+    "newPath": [
+      "(p)/:p(\\d+)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/(p)/:p(\\d+)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/:month(12)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/:month(12)/(p)/:p(\\d+)"
+    ]
+  },
+  {
+    "path": "/review/highpost",
+    "newPath": [
+      "(p)/:p(\\d+)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/:month(12)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/:month(12)/(p)/:p(\\d+)",
+      ":type(systemtrade|tools)/:month(3)",
+      ":type(systemtrade|tools)/:month(3)/(p)/:p(\\d+)"
+    ]
+  },
+  {
+    "path": "/event/search",
+    "newPath": [
+     "cat/:categories?/(p)?/:page(\\d+)?",
+     "(from)?/:from(\\d{4}-\\d{1,2}-\\d{1,2})?/(to)?/:to(\\d{4}-\\d{1,2}-\\d{1,2})?/(cat)?/:categories?/(p)?/:page(\\d+)?"
+    ]
+  },
+  {
+    "path": "/crowdsourcing",
+    "newPath": ":type(finish)/:isFinish(0|1)/:p(p)/:page(\\d+)"
+  },
+  {
+    "path": "/crowdsourcing/developers",
+    "newPath": ":p(p)/:page(\\d+)"
+  }
+]

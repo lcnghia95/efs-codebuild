@@ -1,0 +1,246 @@
+[
+  {
+    "path": "/tools",
+    "newPath": [
+      ":type(free)/:subType(3m|1m|1w|all)",
+      ":type(pcount)/:subType(3m|1m|1w|all)",
+      ":type(osusume)/:subType(campaign|indicator|tool|ebook|set)",
+      ":type(psum)/:subType(3m|1m|1w|all)",
+      ":type(newproduct)/:subType(kabu|fx|other)",
+      ":type(sold)/:subType(fee|free)",
+      ":type(productreview)/:subType(average|count)"
+    ]
+  },
+  {
+    "path": "/tools/:showmore",
+    "newPath": [
+      "(p)?/:p(\\d+)?",
+      ":type(indicator|tool|ebook|set|count|free|kabu|other)/(p)?/:p(\\d+)?"
+    ]
+  },
+  {
+    "path": "/tools/popular/:sub?",
+    "newPath": [
+      "(p)?/:p(\\d+)?",
+      ":type(1m|1w|all)/(p)?/:p(\\d+)?"
+    ]
+  },
+  {
+    "path": "/systemtrade",
+    "children": [
+      {
+        "path": ":revenue/:category?",
+        "newPath": [
+          ":revenue(profitrate|profit|profitfactor|riskreturn|sell)/(p)?/:p(\\d+)?",
+          ":revenue(profitrate|profit|profitfactor|riskreturn|sell)/:category(fx|stocks)/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "newproduct/:category?",
+        "newPath": [
+          "newproduct/(p)?/:p(\\d+)?",
+          "newproduct/:category(fx|stocks)/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "economics/fx/:type?",
+        "newPath": "economics/fx/:type(1|2)/(p)?/:p(\\d+)?"
+      },
+      {
+        "path": "developers",
+        "newPath": "developers/(p)?/:p(\\d+)?"
+      },
+      {
+        "path": "search",
+        "newPath": "search/(detail|easy)"
+      },
+      {
+        "path": "realasset",
+        "newPath": "realasset/(p)?/:p(\\d+)?"
+      },
+      {
+        "path": "fx/:id?/backtest",
+        "newPath": "fx/:id?/backtest/(p)?/:p(\\d+)?"
+      }
+    ]
+  },
+  {
+    "path": "/finance/navi",
+    "children": [
+      {
+        "path": "articles",
+        "newPath": [
+          "articles/(ipc)?/:isPaidContent(0|1)/(pt)?/:periodType(0|1|2|3)/(cat)?/:cat(\\d+)?/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "series",
+        "newPath": [
+          "series/(ipc)?/:isPaidContent(0|1)/(pt)?/:periodType(0|1|2|3)/(so)?/:sort(0|1)/(p)?/:p(\\d+)?"
+        ]
+      },
+      {
+        "path": "authors",
+        "newPath": [
+          "authors/(st)?/:sort(0|1|2|3)/(p)?/:p(\\d+)?/(w)?/:w?"
+        ]
+      },
+      {
+        "path": ":type/searchresult",
+        "newPath": [
+          ":type/searchresult/(p)?/:p(\\d+)?/(ipc)?/:isPaidContent(\\d+)?/(pt)?/:periodType(\\d+)?/:searchType(w|t)?/:wt?"
+        ]
+      },
+      {
+        "path": "authors/:id?",
+        "newPath": "authors/:id(\\d+)?/(p)?/:p(\\d+)?"
+      },
+      {
+        "path": "series/:id?",
+        "newPath": "series/:id(\\d+)?/(p)?/:p(\\d+)?/(s)?/:s(\\d+)?"
+      }
+    ]
+  },
+  {
+    "path": "/finance/salons/:id",
+    "newPath": "t/:t(0|1|2|3)"
+  },
+  {
+    "path": "/finance/mailmagazine",
+    "newPath": "(t)?/:t(1|2)"
+  },
+  {
+    "path": "/finance/mailmagazine/:salon",
+    "newPath": ":t(law|community)"
+  },
+  {
+    "path": "/finance/videos/premier",
+    "newPath": "(p)?/:p(\\d+)?"
+  },
+  {
+    "path": "/finance/videos/gogojungletv",
+    "newPath": "(p)?/:p(\\d+)?"
+  },
+  {
+    "path": "/finance/videos/new",
+    "newPath": "(p)?/:p(\\d+)?"
+  },
+  {
+    "path": "/finance/videos/trend",
+    "newPath": "(p)?/:p(\\d+)?"
+  },
+  {
+    "path": "/finance/videos/searchresult",
+    "newPath": "(p)?/:p(\\d+)?/:searchType(w|t)?/:wt?"
+  },
+  {
+    "path": "/info",
+    "children": [
+      {
+        "path": "",
+        "newPath": [
+          ":type(seller|partner)",
+          ":type(seller|partner)/y/:y(\\d+)?/(p)?/:p(\\d+)?/(t)?/:t(1|2|1,2|1%2C2|2,1|2%2C1)?",
+          "y/:y(\\d+)?/(p)?/:p(\\d+)?/(t)?/:t(1|2|1,2|1%2C2|2,1|2%2C1)?"
+        ]
+      },
+      {
+        "path": ":id",
+        "newPath":":type(seller|partner)/:id"
+      }
+    ]
+  },
+  {
+    "path": "/event",
+    "children": [
+      {
+        "path": "",
+        "newPath": "p/:p(\\d+)"
+      },
+      {
+        "path": "area/:large?/:medium?",
+        "newPath": "area/:large(\\d+)/:medium(\\d+)?/(p)?/:p(\\d+)"
+      },
+      {
+        "path": "search",
+        "newPath": [
+         "search/cat/:categories?/(p)?/:page(\\d+)?",
+         "search/(from)?/:from(\\d{4}-\\d{1,2}-\\d{1,2})?/(to)?/:to(\\d{4}-\\d{1,2}-\\d{1,2})?/(cat)?/:categories?/(p)?/:page(\\d+)?"
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/review/highscore",
+    "newPath": [
+      "(p)/:p(\\d+)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/(p)/:p(\\d+)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/:month(12)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/:month(12)/(p)/:p(\\d+)"
+    ]
+  },
+  {
+    "path": "/review/highpost",
+    "newPath": [
+      "(p)/:p(\\d+)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/:month(12)",
+      ":type(systemtrade|tools|kabu|navi|salons|emagazine|others)/:month(12)/(p)/:p(\\d+)",
+      ":type(systemtrade|tools)/:month(3)",
+      ":type(systemtrade|tools)/:month(3)/(p)/:p(\\d+)"
+    ]
+  },
+  {
+    "path": "/review/new",
+    "newPath": "(p)/:p(\\d+)"
+  },
+  {
+    "path": "/review/popular",
+    "newPath": "(p)/:p(\\d+)"
+  },
+  {
+    "path": "/review/detail/:id?",
+    "newPath": "(p)/:p(\\d+)"
+  },
+  {
+    "path": "/products",
+    "newPath": "(p)?/:p(\\d+)?"
+  },
+  {
+    "path": "/markets/economics",
+    "newPath":"y/:y(\\d+)/(m)?/:m(\\d+)?/(p)?/:p(\\d+)?"
+  },
+  {
+    "path": "/users/:id?",
+    "children": [
+      {
+        "path": "blog",
+        "newPath": "blog/p/:p(\\d+)?"
+      },
+      {
+        "path": "follows",
+        "newPath": "follows/p/:p(\\d+)?"
+      },
+      {
+        "path": "followers",
+        "newPath": "followers/p/:p(\\d+)?"
+      },
+      {
+        "path": "review",
+        "newPath": "review/p/:p(\\d+)?"
+      }
+    ]
+  },
+  {
+    "path": "/companies/present",
+    "newPath": ":category(all|fx|stocks)?"
+  },
+  {
+    "path": "/crowdsourcing",
+    "newPath": ":type(finish)/:isFinish(0|1)/:p(p)/:page(\\d+)"
+  },
+  {
+    "path": "/crowdsourcing/developers",
+    "newPath": ":p(p)/:page(\\d+)"
+  }
+]

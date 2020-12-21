@@ -1,0 +1,2 @@
+webpackJsonp([99],{"D5+h":function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=i("TiqR"),s=i("xiP5"),r=i("VU/8")(n.a,s.a,!1,null,null,null);r.options.__file="mobile/pages/systemtrade/index.vue",t.default=r.exports},TiqR:function(e,t,i){"use strict";t.a={layout:"systemtrade"}},xiP5:function(e,t,i){"use strict";var n=function(){var e=this.$createElement;return(this._self._c||e)("nuxt-child")};n._withStripped=!0;var s={render:n,staticRenderFns:[]};t.a=s}});
+//# sourceMappingURL=index.9fb5c612afc5a2651d99.js.map

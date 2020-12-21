@@ -1,0 +1,10 @@
+i.icon-cls {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+i.icon-cls svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}

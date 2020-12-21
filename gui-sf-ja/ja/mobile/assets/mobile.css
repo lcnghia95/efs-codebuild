@@ -1,0 +1,33 @@
+@import '@@/node_modules/bootstrap/dist/css/bootstrap.css';
+@import '@@/../common/assets/common.css';
+:root {
+  /* https://stackoverflow.com/a/43131958/6382295
+    Eg: 10px, 10/16
+  */
+  font-size: 62.5%;
+}
+body {
+  /* Eg: 15px */
+  font-size: 1.5rem !important;
+}
+.bg-gray {
+  background-color: rgb(243, 240, 239);
+}
+.col-black {
+  color: black;
+}
+.col-gray {
+  color: rgb(112, 112, 112);
+}
+.col-greyish {
+  color: rgb(178, 178, 178);
+}
+.col-warmgrey {
+  color: rgb(112, 112, 112);
+}
+.col-orange {
+  color: rgb(255, 102, 0);
+}
+.col-lightgrey {
+  color: rgb(224, 222, 220);
+}

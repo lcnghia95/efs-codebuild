@@ -1,0 +1,26 @@
+.input-form {
+  height: 40px;
+  transition: .3s cubic-bezier(.4, 0, .2, 1);
+  position: relative;
+  display: flex;
+}
+.input-form:before {
+  content: '';
+  width: 100%;
+  border-bottom: solid #adadad 2px;
+  position: absolute;
+  bottom: 0;
+}
+.input-form:after {
+  content: '';
+  border-bottom: solid #000031 2px;
+  transform: scaleX(0);
+  transform-origin: center center 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: .3s cubic-bezier(.4, 0, .2, 1);
+}
+.input-form--focus:after {
+  transform: scaleX(1);
+}
