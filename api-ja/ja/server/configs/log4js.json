@@ -1,0 +1,54 @@
+{
+    "appenders": {
+      "access": {
+        "type": "dateFile",
+        "filename": "logs/access.log",
+        "pattern": "-yyyy-MM-dd",
+        "category": "http",
+        "layout": {
+          "type": "pattern",
+          "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] %h %z [%p] %m"
+        },
+        "compress": true,
+        "daysToKeep": 20
+      },
+      "console": {
+        "type": "console",
+        "layout": {
+          "type": "pattern",
+          "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] %h %z %X{userId} (%X{fileName},%X{functionName},%X{lineNumber}) [%p] %m"
+        }
+      },
+      "app": {
+        "type": "dateFile",
+        "filename": "logs/app.log",
+        "pattern": "-yyyy-MM-dd",
+        "layout": {
+          "type": "pattern",
+          "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] %h %z %X{userId} (%X{fileName},%X{functionName},%X{lineNumber}) [%p] %m"
+        },
+        "compress": true,
+        "daysToKeep": 20
+      },
+      "errorFile": {
+        "type": "dateFile",
+        "filename": "logs/errors.log",
+        "pattern": "-yyyy-MM-dd",
+        "layout": {
+          "type": "pattern",
+          "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] %h %z %X{userId} (%X{fileName},%X{functionName},%X{lineNumber}) [%p] %m"
+        },
+        "compress": true,
+        "daysToKeep": 20
+      },
+      "errors": {
+        "type": "logLevelFilter",
+        "level": "ERROR",
+        "appender": "errorFile"
+      }
+    },
+    "categories": {
+      "default": { "appenders": [ "app", "errors", "console" ], "level": "INFO" },
+      "http": { "appenders": [ "access", "console"], "level": "DEBUG" }
+    }
+  }

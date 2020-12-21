@@ -1,0 +1,8 @@
+{
+  "globals": {
+    "calg": true,
+    "consts": true,
+    "logger": true,
+    "setUserIdLogCtx": true
+  }
+}
