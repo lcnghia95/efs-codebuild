@@ -1,0 +1,2 @@
+alter table `common`.`pr_products` add column `languages` INT(11) NULL DEFAULT '1' COMMENT 'Language pr product will be supported' after `product_id`;
+alter table `surfaces`.`common_pr_products` add column `languages` INT(11) NULL DEFAULT '1' COMMENT 'Language pr product will be supported' after `product_name`;  

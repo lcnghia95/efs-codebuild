@@ -1,0 +1,2 @@
+alter table `logs`.`click` add column `languages` INT(11) NULL DEFAULT '1' COMMENT 'Language from redirect' after `marchant_company_id`;
+alter table `master`.`affiliate_complete` add column `languages` INT(11) NULL DEFAULT '1' COMMENT 'Language from redirect' after `click_id`;

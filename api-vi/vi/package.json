@@ -1,0 +1,60 @@
+{
+  "name": "gogo.api.vi",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "main": "server/server.js",
+  "engines": {
+    "node": "10.16.0"
+  },
+  "config_version": "1",
+  "nodemonConfig": { "ignore": ["model-config.json"]},
+  "scripts": {
+    "start:debug": "set DEBUG=loopback:datasource && %NVM_HOME%/v%npm_package_engines_node%/node .",
+    "prestart": "cd .. && %NVM_HOME%/v%npm_package_engines_node%/node_modules/yarn/bin/yarn && cd ./vi && %NVM_HOME%/v%npm_package_engines_node%/node_modules/yarn/bin/yarn",
+    "start": "nodemon ./server/server.js",
+    "prepm2": "cd .. && $NVM_DIR/versions/node/v$npm_package_engines_node/lib/node_modules/yarn/bin/yarn && cd ./vi && $NVM_DIR/versions/node/v$npm_package_engines_node/lib/node_modules/yarn/bin/yarn",
+    "pm2": "pm2 start ecosystem.config.js",
+    "lint": "eslint --ext .js --fix .",
+    "run:gnats:server:local": "mq_subscriber/gnatsd-v1.4.1-windows-amd64/gnatsd.exe -c mq_subscriber/.env.gnatsd-server.local",
+    "aws": "node ."
+  },
+  "_moduleAliases": {
+    "@@": "..",
+    "@": ".",
+    "@server": "server",
+    "@services": "server/services",
+    "@controllers": "server/controllers",
+    "@@server": "../server",
+    "@@services": "../server/services",
+    "@@controllers": "../server/controllers"
+  },
+  "dependencies": {
+    "@ggj/configs" : "1.0.9",
+    "@ggj/utils": "1.1.6",
+    "cookie": "^0.3.1",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "date-fns": "^1.29.0",
+    "ejs": "^2.6.1",
+    "express-list-endpoints": "^4.0.0",
+    "helmet": "^3.10.0",
+    "log4js": "^4.3.1",
+    "loopback": "^3.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.2.0",
+    "loopback-connector-mysql": "^5.3.1",
+    "mkdirp": "^0.5.1",
+    "module-alias": "^2.1.0",
+    "morgan": "^1.9.1",
+    "randomstring": "^1.1.5",
+    "request": "^2.83.0",
+    "sprintf-js": "^1.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  }
+}

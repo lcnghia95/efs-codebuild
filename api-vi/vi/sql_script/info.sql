@@ -1,0 +1,1 @@
+alter table `common`.`information` add column `languages` INT(11) NULL DEFAULT '1' COMMENT 'Language product will be supported' after `content` 

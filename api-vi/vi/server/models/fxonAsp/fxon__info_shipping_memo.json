@@ -1,0 +1,29 @@
+{
+  "name": "FxonInfoShippingMemo",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "asp",
+      "table": "_info_shipping_memo"
+    },
+    "automaticValidation": false
+  },
+  "properties": {
+    "ID": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "ID",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    }
+  }
+}
